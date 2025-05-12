@@ -1,0 +1,24 @@
+name: CI/CD Básico
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Descargar repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Instalar pytest
+      run: |
+        pip install pytest
+
+    - name: Ejecutar pruebas
+      run: |
+        pytest
