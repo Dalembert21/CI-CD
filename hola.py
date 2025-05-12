@@ -4,8 +4,8 @@ def test_saludo_correcto():
     assert saludar() == "Hola esta es mi primera practica de CI/CD"
 
 def test_saludo_incorrecto():
-    # Esta prueba está diseñada para fallar a propósito
-    assert saludar() == "Hola mundo"
+    #comparar si tienen el mismo dato
+    assert saludar() == "Hola mundooooooooo"
 
 def test_saludo_no_vacio():
     assert saludar() != ""
